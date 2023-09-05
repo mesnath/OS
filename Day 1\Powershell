@@ -1,1 +1,65 @@
+get-host|select version
 
+#read a file
+get-content -path "C:\file path"
+#help
+get-help Get-Process
+Get-Help Get-Process -Online
+Get-Location
+pwd
+#alias
+Get-Alias pwd
+# members, see what properties and methods are available
+get-process | Get-Member
+Get-Process
+get-process | Select-Object processname, id
+#dot notation
+process notepad.exe
+stop-process notepad.exe
+stop-process -name notepad.exe
+#pipeline
+Get-Process | Select-Object name, id, path | Where-Object {$_.id -lt '1000'}
+#CIM
+get-cimclass 
+Get-WmiObject -Class logicaldisk -filter "drivetype=3"
+#foreach
+$letterarray = "a", "b", "c"
+foreach ($letter in $letterarray) {Write-Host $letter}
+
+#if/else
+$a=3
+is ($a -gt 2){write-host "the value $a is greater than two"} elseif($a-eq2){write-host "the value $a is equal to two"} else{write-host "the value $a is NOT greater than 2"}
+
+#variables
+#create a variable
+$myvariable = Get-Process
+$myvariable
+#unset and remove variable
+Clear-Variable -Name myvariable
+#variable/command substitution and dot property
+$today = (Get-date).DateTime
+Get-help about_automatic_variables
+#execution policy
+Get-ExecutionPolicy
+#comparison opperator
+    #services with a stopped status
+get-service | Where-Object {$_.Status -eq "stopped"}
+get-service | where {$_.name -like "*xbox*"}
+
+************************************************************************************************
+************************************************************************************************
+
+Powershell profiles
+    - loaded up everytime it's used
+    - form of persistence
+    - processes can't start themselves
+    - $profile
+    - test-path -path $profile.AllUsersAllHosts
+    - test-path -path $profile.AllUsersCurrentHost
+    - test-path -path $profile.CurrentUserAllHosts
+    - test-path -path $profile.CurrentUserCurrentHost
+    - get-content -path $profile.CurrentUserCurrentHost
+    - cat -path $profile.CurrentUserCurrentHost
+
+# Create profile
+new-item -itemtype file -path $profile.currentusercurrenthost -force
