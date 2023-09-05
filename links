@@ -2,3 +2,5 @@ student guide - https://os.cybbh.io/public/os/latest/index.html
 opstations - https://vta.cybbh.space/horizon/project/instances/
 CTFD Server - http://10.50.24.129:8000/
 Stack # 6 - 10.50.45.73
+
+xfreerdp /u:student /v:10.50.21.25 /dynamic-resolution +clipboard +glyph-cache 
