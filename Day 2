@@ -1,6 +1,7 @@
 ******************************        ******************************
                               REGISTRY
 ********************************************************************
+section 5 on FG has important locations and info on registry
 regedit
   gui
   C:\windows\regedit.exe
@@ -13,7 +14,7 @@ Powershell
   Root Hive Keys loaded as powershell drives
   Commands used
     get-item, get-itemproperty, get-childitem
-    set-itemproperty, new-item, new-itemproperty
+    set-itemproperty (change what it launches), new-item, new-itemproperty(makes completely new one)
 5 main "Hives"/keys
   All hives in HKLM are stored in %SYSTEMROOT%\System32\config\ 
 
@@ -32,3 +33,10 @@ Powershell
       Current Config
     HKR
       root
+
+
+********************************************************************
+                            Windows ADS
+********************************************************************
+came in wth NTFS
+stripped when brought onto fat32
