@@ -1,0 +1,34 @@
+******************************        ******************************
+                              REGISTRY
+********************************************************************
+regedit
+  gui
+  C:\windows\regedit.exe
+reg.exe
+  cli
+  C:\Windows\System32.reg.exe
+  useful commands:
+    reg add, reg query, reg delete
+Powershell
+  Root Hive Keys loaded as powershell drives
+  Commands used
+    get-item, get-itemproperty, get-childitem
+    set-itemproperty, new-item, new-itemproperty
+5 main "Hives"/keys
+  All hives in HKLM are stored in %SYSTEMROOT%\System32\config\ 
+
+    HKLM
+      Local Machine
+      HKLM\HARDWARE is a dynamic hive that is created each time the system boots and it is created and managed entirely in memory.
+    HKU
+      Users
+      HKU\SID hive file is stored in user home directory, which is %USERPROFILE%\NTUSER.DAT.
+      HKU\SID_CLASSES hive file correspond to "%USERPROFILE%\Application Data\Local\Microsoft\Windows\UsrClass.dat"
+    HKCU
+      Current user
+      symbolic link
+      affects currently logged in user until they log out and the cycle continues
+    HKCC
+      Current Config
+    HKR
+      root
