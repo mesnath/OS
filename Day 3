@@ -1,0 +1,18 @@
+********************************************************************************
+                              Windows Boot Process
+********************************************************************************
+
+BIOS
+  MBR
+  Volume Boot Sector
+  Bootloader (NTLDR.exe for kernel 5 and older, Bootmgr.exe for kernal 6+)
+  boot.ini *or* BCD
+  nothing *or* OS loader
+  NTOSKRNL
+UEFI
+  GUID Partition table
+  *NO VBS*
+  Boot manager
+  BCD
+  OS loader (winload.efi/winresume.efi
+  NTOSKRNL
