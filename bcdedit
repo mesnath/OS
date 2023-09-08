@@ -1,0 +1,4 @@
+bcdedit /export C:\bcd.bk
+
+bcdedit /displayorder {ntldr} /addfirst
+bcdedit /export C:\bcd.bk
