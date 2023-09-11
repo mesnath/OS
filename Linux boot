@@ -1,0 +1,5 @@
+xxd - gives hex value of whatever you're inputting
+    ex1:
+dd
+      ex1:
+- bit for bit copy of input
