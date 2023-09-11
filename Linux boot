@@ -1,5 +1,4 @@
 xxd - gives hex value of whatever you're inputting
-    ex1:
-dd
-      ex1:
-- bit for bit copy of input
+    ex1: sudo xxd -l 5 -s 392 -===-g /dev/vda 
+dd - bit for bit copy of input
+      ex1: sudo dd if=/dev/vda of=demo bs=8 count=5 skip-392
