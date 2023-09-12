@@ -1,0 +1,29 @@
+resolve dll to process
+get-process -name "*chrome*" | select-object -expandproperty Modules | more
+get-process -name "*chrome*" | select-object -expandproperty Modules | where modulename -like '*chrome*' | more
+
+services
+get-ciminstance win32_service | get-member
+get-ciminstance win32_service | select name,processid,parent,pathname | ft -wrap | more
+scquery
+
+too bad you cant kill me in shellshock
+you have your big iron on you irl?
+
+
+get-scheduledtask | select * | select -first 1
+schtasks /query /tn "AAAA" /v /fo list
+
+netstat -ano
+get-net
+
+
+net use * http://live.sysinternals.com
+z:
+
+$wc = new-object System.net.WebClient
+$wc.DownloadFile('https://download.sysinternals.com/files/SysinternalsSuite.zip", :$pwd\SysinternalsSuite.zip")
+expand-archive SysinternalsSuite.zip
+c:\SysinternalsSuite\sigcheck.exe
+c:\SysinternalsSuite\Autoruns.exe            -accepteula     start mechsnisms
+c:\SysinternalsSuite\procexp.exe             -accepteula
