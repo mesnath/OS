@@ -3,3 +3,12 @@ registry keys
     run
     runonce
     services
+scheduled tasks
+services
+
+BASH
+    cron jobs
+    bashrc
+    /etc/profile
+    bash-profile
+    daemons/services
