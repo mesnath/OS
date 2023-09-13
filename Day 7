@@ -27,3 +27,6 @@ CRON JOBS
 
 sudo lsof
 sudo lsof -c <name>
+
+
+sudo netstat -ltup
