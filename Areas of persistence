@@ -9,6 +9,7 @@ services
 BASH
     cron jobs
     bashrc
+    /etc/inittab
     /etc/profile
     bash-profile
     daemons/services
