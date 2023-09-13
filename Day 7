@@ -1,0 +1,8 @@
+Linux Process Validation
+
+kernel-space - PID=1
+user-space - PID=2
+RUID (Real user ID)
+  user can kill and send signals to a process
+EUID
+  allows anyone with permissions to fuck with processes
