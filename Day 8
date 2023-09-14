@@ -1,1 +1,15 @@
+****************how to get sid********************
+get-localuser | select name,SID
+get-wmiobject win32_useraccount | select name,sid
+wmic useraccount get name,sid
 
+userassist 
+    tracks GUI based programs that were ran by a specific user
+          executable files:
+            Get-ItemProperty 'REGISTRY::HKEY_USERS\*\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\Count'
+          shortcut files:
+            Get-ItemProperty 'REGISTRY::HKEY_USERS\*\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{F4E57C4B-2036-45F0-A9AB-443BCFE33D9F}\Count'
+
+Recycle Bin
+   gci 'C:\$RECYCLE.BIN' -Recurse -Verbose -Force | select *
+   gci 'C:\$RECYCLE.BIN' -Recurse -Force
