@@ -1,0 +1,17 @@
+syslog   - sysv
+    
+journald - systemd
+    journalctl
+    journalctl --list-boots
+    sudo journalctl -u ssh.service
+    
+facility. severity
+              0-7, lower number = higher severity
+
+
+
+/var/log/auth.log = authorization info, login, failed login
+/var/log/secure = security logs, failed login, priv stuff
+/var/run/utmp = users currently logged in
+/var/log/wtmp = archive of utmp, everyone logged in
+/var/log/btmp = failed login attempts
