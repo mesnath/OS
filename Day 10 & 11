@@ -1,0 +1,8 @@
+Memory Analysis Using Volatility
+-----------------------------------------
+nothing on the test about it but we should know how to do
+
+
+Active Directory Enumeration
+-----------------------------------------
+get-aduser -filter {Enabled -eq "FALSE"} -properties name, enabled
