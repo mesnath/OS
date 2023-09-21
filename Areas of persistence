@@ -1,3 +1,4 @@
+WINDOWS
 powershell profiles
 registry keys
     run
@@ -8,6 +9,8 @@ services
 
 BASH
     cron jobs
+        /etc/cron.d
+        /etc/crontab
     bashrc
     /etc/inittab
     /etc/profile
