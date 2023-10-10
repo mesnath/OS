@@ -3,3 +3,27 @@ pasta 05e5fb96e2a117e01fc1227f1c4d664c
 hangry 9f7a33941828bdafd2755fd20176cdf4
 neighbor d3b88e04de1e76482a1972f36734a7d8
 
+AN EXAMPLE OF TUNNELING THROUGH A NEWTWORK WITH REV AND STRIGHT TUNNELS
+
+1.  IH> telnet 10.50.40.12                                                    #here we are telneting to the .12 to create a reverse tunnel
+
+2.  SSH1>  ssh student@10.50.36.109 -R 41399:localhost:22 -NT                 #here we are making the reverse tunnel back to our <IH> opening a new port 41399 on the IH leading to 22 on SSH1
+
+3.  IH>  ssh net4_student13@localhost -p 41399 -L 41309:192.168.0.40:5555 -NT #here we are tunneling to SSH4 to get into the internal network from IH new port 41309
+
+4. IH> ssh net4_student@localhost -p 41309 -L 41310:172.16.0.60:23 -NT        #here we are making a tunnel to the SSH6 get it ready to do a reverse tunnel
+
+5. IH> telnet localhost 41310                                                 #here we are telneting into ssh6 to set up reverse tunnel
+
+6. SSH6> ssh net4_student13@192.168.0.40 -p 5555 -R 41398:localhost:22 -NT    #here we are making the reverse tunnel to the SSH4
+
+7. IH> ssh net4_comrade13@localhost -p 41309 -L 41311:localhost:41398 -NT     #here we are connecting to the SSH4 where we point to there port 41398 that point to the SSH6
+
+8. IH> ssh net4_comrade13@localhost -p 41311 -L 41312:172.16.0.90:2222 -NT    #this makes a tunnel to ssh9 
+
+9. IH> ssh net4_comrade13@localhost -p 41312 -L 41313:172.16.0.100:23 -NT     #this makes a tunnel to ssh10 to there telnet 
+
+10. IH> telnet localhost 41313                                                #this will telnet into the ssh10 and now we can run our commands 
+
+#this is a way to tunnel through a network and this follows the draw.io networkmap#
+continue as followed for any further networks 
