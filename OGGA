@@ -3,6 +3,7 @@ pasta 05e5fb96e2a117e01fc1227f1c4d664c
 hangry 9f7a33941828bdafd2755fd20176cdf4
 neighbor d3b88e04de1e76482a1972f36734a7d8
 
+be33fe60229f8b8ee22931a3820d30ac
 AN EXAMPLE OF TUNNELING THROUGH A NEWTWORK WITH REV AND STRIGHT TUNNELS
 
 1.  IH> telnet 10.50.40.12                                                    #here we are telneting to the .12 to create a reverse tunnel
